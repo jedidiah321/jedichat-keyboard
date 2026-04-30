@@ -24,15 +24,18 @@ jobs:
     - name: Accept Android licenses
       run: yes | sdkmanager --licenses || true
 
-    - name: Install Android build tools
+    - name: Install Android platform
       run: sdkmanager "platforms;android-34" "build-tools;34.0.0"
 
     - name: Build Debug APK
-      run: |
-        gradle assembleDebug --stacktrace 2>&1 | tail -50
+      run: gradle assembleDebug
+
+    - name: Find APK
+      run: find . -name "*.apk" -type f
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: jedichat-keyboard-debug
-        path: app/build/outputs/apk/debug/app-debug.apk
+        path: "**/*.apk"
+        if-no-files-found: warn
