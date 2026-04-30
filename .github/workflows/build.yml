@@ -21,13 +21,15 @@ jobs:
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
 
-    - name: Setup Gradle
-      uses: gradle/gradle-build-action@v3
-      with:
-        gradle-version: '8.2'
+    - name: Accept Android licenses
+      run: yes | sdkmanager --licenses || true
+
+    - name: Install Android build tools
+      run: sdkmanager "platforms;android-34" "build-tools;34.0.0"
 
     - name: Build Debug APK
-      run: gradle assembleDebug
+      run: |
+        gradle assembleDebug --stacktrace 2>&1 | tail -50
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
