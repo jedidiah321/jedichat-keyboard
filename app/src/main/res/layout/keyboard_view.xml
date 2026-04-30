@@ -5,14 +5,13 @@
     android:orientation="vertical"
     android:background="#1C1C1E">
 
-    <!-- AI Suggestions Bar -->
+    <!-- Suggestions Bar -->
     <LinearLayout
         android:id="@+id/suggestions_bar"
         android:layout_width="match_parent"
         android:layout_height="44dp"
         android:orientation="horizontal"
-        android:background="#2C2C2E"
-        android:gravity="center_vertical">
+        android:background="#2C2C2E">
 
         <TextView
             android:id="@+id/suggestion1"
@@ -22,14 +21,11 @@
             android:gravity="center"
             android:text="It"
             android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            android:background="?attr/selectableItemBackground"
+            android:textSize="15sp"
             android:paddingHorizontal="8dp"/>
 
-        <View
-            android:layout_width="1dp"
-            android:layout_height="24dp"
-            android:background="#444446"/>
+        <View android:layout_width="1dp" android:layout_height="24dp"
+            android:layout_gravity="center" android:background="#444446"/>
 
         <TextView
             android:id="@+id/suggestion2"
@@ -39,15 +35,11 @@
             android:gravity="center"
             android:text="The"
             android:textColor="#34C759"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:background="?attr/selectableItemBackground"
-            android:paddingHorizontal="8dp"/>
+            android:textSize="15sp"
+            android:textStyle="bold"/>
 
-        <View
-            android:layout_width="1dp"
-            android:layout_height="24dp"
-            android:background="#444446"/>
+        <View android:layout_width="1dp" android:layout_height="24dp"
+            android:layout_gravity="center" android:background="#444446"/>
 
         <TextView
             android:id="@+id/suggestion3"
@@ -57,119 +49,76 @@
             android:gravity="center"
             android:text="I"
             android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            android:background="?attr/selectableItemBackground"
-            android:paddingHorizontal="8dp"/>
-
+            android:textSize="15sp"/>
     </LinearLayout>
 
-    <!-- Keys Row 1: Q W E R T Y U I O P -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="4dp"
-        android:gravity="center">
-
-        <Button android:id="@+id/key_q" style="@style/KeyStyle" android:text="q"/>
-        <Button android:id="@+id/key_w" style="@style/KeyStyle" android:text="w"/>
-        <Button android:id="@+id/key_e" style="@style/KeyStyle" android:text="e"/>
-        <Button android:id="@+id/key_r" style="@style/KeyStyle" android:text="r"/>
-        <Button android:id="@+id/key_t" style="@style/KeyStyle" android:text="t"/>
-        <Button android:id="@+id/key_y" style="@style/KeyStyle" android:text="y"/>
-        <Button android:id="@+id/key_u" style="@style/KeyStyle" android:text="u"/>
-        <Button android:id="@+id/key_i" style="@style/KeyStyle" android:text="i"/>
-        <Button android:id="@+id/key_o" style="@style/KeyStyle" android:text="o"/>
-        <Button android:id="@+id/key_p" style="@style/KeyStyle" android:text="p"/>
+    <!-- Row 1 -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+        android:orientation="horizontal" android:padding="3dp">
+        <TextView android:id="@+id/key_q" style="@style/KeyStyle" android:text="q"/>
+        <TextView android:id="@+id/key_w" style="@style/KeyStyle" android:text="w"/>
+        <TextView android:id="@+id/key_e" style="@style/KeyStyle" android:text="e"/>
+        <TextView android:id="@+id/key_r" style="@style/KeyStyle" android:text="r"/>
+        <TextView android:id="@+id/key_t" style="@style/KeyStyle" android:text="t"/>
+        <TextView android:id="@+id/key_y" style="@style/KeyStyle" android:text="y"/>
+        <TextView android:id="@+id/key_u" style="@style/KeyStyle" android:text="u"/>
+        <TextView android:id="@+id/key_i" style="@style/KeyStyle" android:text="i"/>
+        <TextView android:id="@+id/key_o" style="@style/KeyStyle" android:text="o"/>
+        <TextView android:id="@+id/key_p" style="@style/KeyStyle" android:text="p"/>
     </LinearLayout>
 
-    <!-- Keys Row 2: A S D F G H J K L -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="4dp"
-        android:gravity="center">
-
-        <Button android:id="@+id/key_a" style="@style/KeyStyle" android:text="a"/>
-        <Button android:id="@+id/key_s" style="@style/KeyStyle" android:text="s"/>
-        <Button android:id="@+id/key_d" style="@style/KeyStyle" android:text="d"/>
-        <Button android:id="@+id/key_f" style="@style/KeyStyle" android:text="f"/>
-        <Button android:id="@+id/key_g" style="@style/KeyStyle" android:text="g"/>
-        <Button android:id="@+id/key_h" style="@style/KeyStyle" android:text="h"/>
-        <Button android:id="@+id/key_j" style="@style/KeyStyle" android:text="j"/>
-        <Button android:id="@+id/key_k" style="@style/KeyStyle" android:text="k"/>
-        <Button android:id="@+id/key_l" style="@style/KeyStyle" android:text="l"/>
+    <!-- Row 2 -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+        android:orientation="horizontal" android:padding="3dp">
+        <TextView android:id="@+id/key_a" style="@style/KeyStyle" android:text="a"/>
+        <TextView android:id="@+id/key_s" style="@style/KeyStyle" android:text="s"/>
+        <TextView android:id="@+id/key_d" style="@style/KeyStyle" android:text="d"/>
+        <TextView android:id="@+id/key_f" style="@style/KeyStyle" android:text="f"/>
+        <TextView android:id="@+id/key_g" style="@style/KeyStyle" android:text="g"/>
+        <TextView android:id="@+id/key_h" style="@style/KeyStyle" android:text="h"/>
+        <TextView android:id="@+id/key_j" style="@style/KeyStyle" android:text="j"/>
+        <TextView android:id="@+id/key_k" style="@style/KeyStyle" android:text="k"/>
+        <TextView android:id="@+id/key_l" style="@style/KeyStyle" android:text="l"/>
     </LinearLayout>
 
-    <!-- Keys Row 3: SHIFT Z X C V B N M DELETE -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="4dp"
-        android:gravity="center">
-
-        <Button android:id="@+id/key_shift" style="@style/SpecialKeyStyle" android:text="⇧"/>
-        <Button android:id="@+id/key_z" style="@style/KeyStyle" android:text="z"/>
-        <Button android:id="@+id/key_x" style="@style/KeyStyle" android:text="x"/>
-        <Button android:id="@+id/key_c" style="@style/KeyStyle" android:text="c"/>
-        <Button android:id="@+id/key_v" style="@style/KeyStyle" android:text="v"/>
-        <Button android:id="@+id/key_b" style="@style/KeyStyle" android:text="b"/>
-        <Button android:id="@+id/key_n" style="@style/KeyStyle" android:text="n"/>
-        <Button android:id="@+id/key_m" style="@style/KeyStyle" android:text="m"/>
-        <Button android:id="@+id/key_delete" style="@style/SpecialKeyStyle" android:text="⌫"/>
+    <!-- Row 3 -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+        android:orientation="horizontal" android:padding="3dp">
+        <TextView android:id="@+id/key_shift" style="@style/SpecialKeyStyle" android:text="⇧"/>
+        <TextView android:id="@+id/key_z" style="@style/KeyStyle" android:text="z"/>
+        <TextView android:id="@+id/key_x" style="@style/KeyStyle" android:text="x"/>
+        <TextView android:id="@+id/key_c" style="@style/KeyStyle" android:text="c"/>
+        <TextView android:id="@+id/key_v" style="@style/KeyStyle" android:text="v"/>
+        <TextView android:id="@+id/key_b" style="@style/KeyStyle" android:text="b"/>
+        <TextView android:id="@+id/key_n" style="@style/KeyStyle" android:text="n"/>
+        <TextView android:id="@+id/key_m" style="@style/KeyStyle" android:text="m"/>
+        <TextView android:id="@+id/key_delete" style="@style/SpecialKeyStyle" android:text="⌫"/>
     </LinearLayout>
 
-    <!-- Keys Row 4: 123 EMOJI SPACE RETURN -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="4dp"
-        android:gravity="center">
-
-        <Button android:id="@+id/key_123" style="@style/SpecialKeyStyle" android:text="123" android:layout_width="56dp"/>
-        <Button android:id="@+id/key_emoji" style="@style/SpecialKeyStyle" android:text="😊" android:layout_width="48dp"/>
-        <Button android:id="@+id/key_space"
-            android:layout_width="0dp"
-            android:layout_height="44dp"
-            android:layout_weight="1"
-            android:layout_margin="2dp"
-            android:text="space"
-            android:textColor="#FFFFFF"
-            android:textSize="13sp"
-            android:background="@drawable/key_space_bg"/>
-        <Button android:id="@+id/key_return" style="@style/SpecialKeyStyle" android:text="↵" android:layout_width="72dp"/>
+    <!-- Row 4 -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+        android:orientation="horizontal" android:padding="3dp">
+        <TextView android:id="@+id/key_123" style="@style/SpecialKeyStyle"
+            android:text="123" android:layout_width="56dp" android:layout_weight="0"/>
+        <TextView android:id="@+id/key_space"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:layout_margin="2dp"
+            android:text="space" android:textColor="#AAAAAA" android:textSize="13sp"
+            android:gravity="center" android:background="@drawable/key_bg"/>
+        <TextView android:id="@+id/key_return" style="@style/SpecialKeyStyle"
+            android:text="↵" android:layout_width="64dp" android:layout_weight="0"/>
     </LinearLayout>
 
-    <!-- AI Mode Bar -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="36dp"
-        android:orientation="horizontal"
-        android:background="#007AFF"
-        android:gravity="center"
-        android:paddingHorizontal="12dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="⚡ JediChat AI"
-            android:textColor="#FFFFFF"
-            android:textSize="12sp"
-            android:textStyle="bold"/>
-
+    <!-- AI Bar -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="32dp"
+        android:background="#007AFF" android:gravity="center" android:paddingHorizontal="12dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="⚡ JediChat AI" android:textColor="#FFFFFF"
+            android:textSize="11sp" android:textStyle="bold"/>
         <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
-
-        <TextView
-            android:id="@+id/ai_status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ready"
-            android:textColor="#FFFFFF"
-            android:textSize="11sp"
-            android:alpha="0.8"/>
+        <TextView android:id="@+id/ai_status" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="Ready"
+            android:textColor="#FFFFFF" android:textSize="10sp"/>
     </LinearLayout>
 
 </LinearLayout>
