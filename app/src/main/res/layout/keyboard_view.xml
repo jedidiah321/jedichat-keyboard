@@ -5,54 +5,25 @@
     android:orientation="vertical"
     android:background="#1C1C1E">
 
-    <!-- Suggestions Bar -->
-    <LinearLayout
-        android:id="@+id/suggestions_bar"
-        android:layout_width="match_parent"
-        android:layout_height="44dp"
-        android:orientation="horizontal"
-        android:background="#2C2C2E">
-
-        <TextView
-            android:id="@+id/suggestion1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="It"
-            android:textColor="#FFFFFF"
-            android:textSize="15sp"
-            android:paddingHorizontal="8dp"/>
-
+    <LinearLayout android:id="@+id/suggestions_bar"
+        android:layout_width="match_parent" android:layout_height="44dp"
+        android:orientation="horizontal" android:background="#2C2C2E">
+        <TextView android:id="@+id/suggestion1" android:layout_width="0dp"
+            android:layout_height="match_parent" android:layout_weight="1"
+            android:gravity="center" android:text="It" android:textColor="#FFFFFF" android:textSize="15sp"/>
         <View android:layout_width="1dp" android:layout_height="24dp"
             android:layout_gravity="center" android:background="#444446"/>
-
-        <TextView
-            android:id="@+id/suggestion2"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="The"
-            android:textColor="#34C759"
-            android:textSize="15sp"
-            android:textStyle="bold"/>
-
+        <TextView android:id="@+id/suggestion2" android:layout_width="0dp"
+            android:layout_height="match_parent" android:layout_weight="1"
+            android:gravity="center" android:text="The" android:textColor="#34C759"
+            android:textSize="15sp" android:textStyle="bold"/>
         <View android:layout_width="1dp" android:layout_height="24dp"
             android:layout_gravity="center" android:background="#444446"/>
-
-        <TextView
-            android:id="@+id/suggestion3"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="I"
-            android:textColor="#FFFFFF"
-            android:textSize="15sp"/>
+        <TextView android:id="@+id/suggestion3" android:layout_width="0dp"
+            android:layout_height="match_parent" android:layout_weight="1"
+            android:gravity="center" android:text="I" android:textColor="#FFFFFF" android:textSize="15sp"/>
     </LinearLayout>
 
-    <!-- Row 1 -->
     <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
         android:orientation="horizontal" android:padding="3dp">
         <TextView android:id="@+id/key_q" style="@style/KeyStyle" android:text="q"/>
@@ -67,7 +38,6 @@
         <TextView android:id="@+id/key_p" style="@style/KeyStyle" android:text="p"/>
     </LinearLayout>
 
-    <!-- Row 2 -->
     <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
         android:orientation="horizontal" android:padding="3dp">
         <TextView android:id="@+id/key_a" style="@style/KeyStyle" android:text="a"/>
@@ -81,7 +51,6 @@
         <TextView android:id="@+id/key_l" style="@style/KeyStyle" android:text="l"/>
     </LinearLayout>
 
-    <!-- Row 3 -->
     <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
         android:orientation="horizontal" android:padding="3dp">
         <TextView android:id="@+id/key_shift" style="@style/SpecialKeyStyle" android:text="⇧"/>
@@ -95,30 +64,25 @@
         <TextView android:id="@+id/key_delete" style="@style/SpecialKeyStyle" android:text="⌫"/>
     </LinearLayout>
 
-    <!-- Row 4 -->
     <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
         android:orientation="horizontal" android:padding="3dp">
         <TextView android:id="@+id/key_123" style="@style/SpecialKeyStyle"
             android:text="123" android:layout_width="56dp" android:layout_weight="0"/>
-        <TextView android:id="@+id/key_space"
-            android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:layout_margin="2dp"
-            android:text="space" android:textColor="#AAAAAA" android:textSize="13sp"
-            android:gravity="center" android:background="@drawable/key_bg"/>
+        <TextView android:id="@+id/key_space" android:layout_width="0dp"
+            android:layout_height="match_parent" android:layout_weight="1"
+            android:layout_margin="2dp" android:text="space" android:textColor="#AAAAAA"
+            android:textSize="13sp" android:gravity="center" android:background="@drawable/key_bg"/>
         <TextView android:id="@+id/key_return" style="@style/SpecialKeyStyle"
-            android:text="↵" android:layout_width="64dp" android:layout_weight="0"/>
+            android:text="return" android:layout_width="72dp" android:layout_weight="0" android:textSize="11sp"/>
     </LinearLayout>
 
-    <!-- AI Bar -->
     <LinearLayout android:layout_width="match_parent" android:layout_height="32dp"
-        android:background="#007AFF" android:gravity="center" android:paddingHorizontal="12dp">
+        android:background="#007AFF" android:gravity="center" android:paddingLeft="12dp" android:paddingRight="12dp">
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="⚡ JediChat AI" android:textColor="#FFFFFF"
-            android:textSize="11sp" android:textStyle="bold"/>
+            android:text="JediChat AI" android:textColor="#FFFFFF" android:textSize="11sp" android:textStyle="bold"/>
         <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
         <TextView android:id="@+id/ai_status" android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:text="Ready"
-            android:textColor="#FFFFFF" android:textSize="10sp"/>
+            android:layout_height="wrap_content" android:text="Ready" android:textColor="#FFFFFF" android:textSize="10sp"/>
     </LinearLayout>
 
 </LinearLayout>

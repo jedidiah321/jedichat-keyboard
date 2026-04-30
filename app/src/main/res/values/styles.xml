@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.JediChatKeyboard" parent="Theme.AppCompat.DayNight"/>
-
     <style name="KeyStyle">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
@@ -12,7 +11,6 @@
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/key_bg</item>
     </style>
-
     <style name="SpecialKeyStyle">
         <item name="android:layout_width">48dp</item>
         <item name="android:layout_height">match_parent</item>
