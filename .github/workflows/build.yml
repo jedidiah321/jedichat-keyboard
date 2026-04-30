@@ -27,8 +27,13 @@ jobs:
     - name: Install Android platform
       run: sdkmanager "platforms;android-34" "build-tools;34.0.0"
 
-    - name: Build Debug APK
-      run: gradle assembleDebug
+    - name: Install Gradle 8.2
+      run: |
+        wget -q https://services.gradle.org/distributions/gradle-8.2-bin.zip
+        unzip -q gradle-8.2-bin.zip
+        export PATH=$PWD/gradle-8.2/bin:$PATH
+        gradle --version
+        gradle assembleDebug
 
     - name: Find APK
       run: find . -name "*.apk" -type f
